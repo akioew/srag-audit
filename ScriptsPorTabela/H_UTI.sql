@@ -12,6 +12,17 @@ DECLARE
 BEGIN
     IF DELETING THEN
         operacao := 'D';
+        auditoria.proc_insere(
+          SYSDATE,
+          tabela,
+          operacao,
+          'UTI_CAS_ID',
+          :OLD.UTI_CAS_ID,
+          NULL,
+          user_bd,
+          user_so,
+          :OLD.rowid
+        );
     ELSE
         operacao := 'U';
     END IF;
