@@ -5,7 +5,7 @@
   -  Lista de tabelas e colunas foi extraída do SQL Developer e salva em arquivo separado (TabelasEColunas.js).
 
 ### Pendentes:
-- **Atualizar nomes das triggers geradas utilizando trigramação (nome completo ultrapassa limite char oracle (30)). PRIORIDADE**
 - Verificar casos onde há chave composta e concatenar tudo em uma só string.
 - Incluir código no SRAG oficial e ler colunas e tabelas direto do script node (sem usar arquivo separado "TabelasEColunas.js").
 - Quando executar ScriptAuditoria, conectar no user AUDITORIA e depois conectar no user APP para rodar os ScriptsPorTabela.
+- ~~Atualizar nomes das triggers geradas utilizando trigramação (nome completo ultrapassa limite char oracle (30)). PRIORIDADE~~
