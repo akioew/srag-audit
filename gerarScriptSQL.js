@@ -16,9 +16,9 @@ AFTER DELETE OR UPDATE
 ON ${dadosTabelaEColunas[0]}
 FOR EACH ROW
 DECLARE
-    user_bd VARCHAR(30) := sys_context('USERENV', 'CURRENT_USER');
-    user_so VARCHAR(30) := sys_context('USERENV', 'OS_USER');
-    tabela VARCHAR(30) := '${dadosTabelaEColunas[0]}';
+    user_bd VARCHAR2(30) := sys_context('USERENV', 'CURRENT_USER');
+    user_so VARCHAR2(30) := sys_context('USERENV', 'OS_USER');
+    tabela VARCHAR2(30) := '${dadosTabelaEColunas[0]}';
     operacao CHAR(1);
 
 BEGIN
@@ -36,7 +36,7 @@ BEGIN
             SYSDATE,
             tabela,
             operacao,
-            ${dadosTabelaEColunas[0]},
+            '${dadosTabelaEColunas[i]}',
             :OLD.${dadosTabelaEColunas[i]},
             :NEW.${dadosTabelaEColunas[i]},
             user_bd,
