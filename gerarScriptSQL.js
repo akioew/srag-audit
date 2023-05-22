@@ -19,7 +19,7 @@ DECLARE
     user_bd VARCHAR(30) := sys_context('USERENV', 'CURRENT_USER');
     user_so VARCHAR(30) := sys_context('USERENV', 'OS_USER');
     tabela VARCHAR(30) := '${dadosTabelaEColunas[0]}';
-    evento CHAR(1);
+    operacao CHAR(1);
 
 BEGIN
     IF DELETING THEN
