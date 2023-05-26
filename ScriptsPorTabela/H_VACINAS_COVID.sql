@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_VAC
+CREATE OR REPLACE TRIGGER tg_aud_h_vac
 AFTER DELETE OR UPDATE
 ON H_VACINAS_COVID
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'VAC_CAS_ID',
-          :OLD.VAC_CAS_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

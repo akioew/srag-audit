@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_TTA
+CREATE OR REPLACE TRIGGER tg_aud_h_tta
 AFTER DELETE OR UPDATE
 ON H_TIPOS_TESTE_ANTIGENO
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'TTA_ID',
-          :OLD.TTA_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

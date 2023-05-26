@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_COM
+CREATE OR REPLACE TRIGGER tg_aud_h_com
 AFTER DELETE OR UPDATE
 ON H_COMORBIDADES
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'COM_ID',
-          :OLD.COM_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_VAG
+CREATE OR REPLACE TRIGGER tg_aud_h_vag
 AFTER DELETE OR UPDATE
 ON H_VACINAS_GRIPE
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'VAG_CAS_ID',
-          :OLD.VAG_CAS_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

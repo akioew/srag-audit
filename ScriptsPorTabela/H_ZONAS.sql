@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_ZON
+CREATE OR REPLACE TRIGGER tg_aud_h_zon
 AFTER DELETE OR UPDATE
 ON H_ZONAS
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'ZON_ID',
-          :OLD.ZON_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

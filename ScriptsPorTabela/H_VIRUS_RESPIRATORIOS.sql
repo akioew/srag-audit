@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_VIR
+CREATE OR REPLACE TRIGGER tg_aud_h_vir
 AFTER DELETE OR UPDATE
 ON H_VIRUS_RESPIRATORIOS
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'VIR_ID',
-          :OLD.VIR_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

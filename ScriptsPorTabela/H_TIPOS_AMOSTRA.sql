@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_TAM
+CREATE OR REPLACE TRIGGER tg_aud_h_tam
 AFTER DELETE OR UPDATE
 ON H_TIPOS_AMOSTRA
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'TAM_ID',
-          :OLD.TAM_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

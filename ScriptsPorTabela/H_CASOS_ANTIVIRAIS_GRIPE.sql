@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_CAG
+CREATE OR REPLACE TRIGGER tg_aud_h_cag
 AFTER DELETE OR UPDATE
 ON H_CASOS_ANTIVIRAIS_GRIPE
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'CAG_CAS_ID',
-          :OLD.CAG_CAS_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

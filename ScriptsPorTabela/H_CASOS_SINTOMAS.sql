@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_CSI
+CREATE OR REPLACE TRIGGER tg_aud_h_csi
 AFTER DELETE OR UPDATE
 ON H_CASOS_SINTOMAS
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'CSI_SIN_ID',
-          :OLD.CSI_SIN_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

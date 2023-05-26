@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_IDG
+CREATE OR REPLACE TRIGGER tg_aud_h_idg
 AFTER DELETE OR UPDATE
 ON H_IDADES_GESTACIONAIS
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'IDG_ID',
-          :OLD.IDG_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

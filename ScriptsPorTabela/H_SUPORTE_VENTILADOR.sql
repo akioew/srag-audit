@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_SVE
+CREATE OR REPLACE TRIGGER tg_aud_h_sve
 AFTER DELETE OR UPDATE
 ON H_SUPORTE_VENTILADOR
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'SVE_ID',
-          :OLD.SVE_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

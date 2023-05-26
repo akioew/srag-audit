@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_CAC
+CREATE OR REPLACE TRIGGER tg_aud_h_cac
 AFTER DELETE OR UPDATE
 ON H_CASOS_ANTIVIRAIS_COVID
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'CAC_CAS_ID',
-          :OLD.CAC_CAS_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

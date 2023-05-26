@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_CAS
+CREATE OR REPLACE TRIGGER tg_aud_h_cas
 AFTER DELETE OR UPDATE
 ON H_CASOS
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'CAS_ID',
-          :OLD.CAS_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

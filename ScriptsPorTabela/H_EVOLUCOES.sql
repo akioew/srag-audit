@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_EVO
+CREATE OR REPLACE TRIGGER tg_aud_h_evo
 AFTER DELETE OR UPDATE
 ON H_EVOLUCOES
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'EVO_ID',
-          :OLD.EVO_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

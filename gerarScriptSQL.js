@@ -11,7 +11,7 @@ function gerarSQL(arrayTabelaEColunas) {
   const dadosTabelaEColunas = arrayTabelaEColunas;
 
   let scriptSQL = `
-CREATE OR REPLACE TRIGGER tg_upd_h_${dadosTabelaEColunas[1].substring(0,3)}
+CREATE OR REPLACE TRIGGER tg_aud_h_${(dadosTabelaEColunas[1].substring(0,3)).toLowerCase()}
 AFTER DELETE OR UPDATE
 ON ${dadosTabelaEColunas[0]}
 FOR EACH ROW
@@ -28,8 +28,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          '${dadosTabelaEColunas[1]}',
-          :OLD.${dadosTabelaEColunas[1]},
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

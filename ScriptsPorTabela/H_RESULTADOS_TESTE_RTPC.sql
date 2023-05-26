@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_RTR
+CREATE OR REPLACE TRIGGER tg_aud_h_rtr
 AFTER DELETE OR UPDATE
 ON H_RESULTADOS_TESTE_RTPC
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'RTR_ID',
-          :OLD.RTR_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

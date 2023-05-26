@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_CRI
+CREATE OR REPLACE TRIGGER tg_aud_h_cri
 AFTER DELETE OR UPDATE
 ON H_CRITERIOS_ENCERRAMENTO
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'CRI_ID',
-          :OLD.CRI_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

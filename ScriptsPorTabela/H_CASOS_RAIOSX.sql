@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_CRX
+CREATE OR REPLACE TRIGGER tg_aud_h_crx
 AFTER DELETE OR UPDATE
 ON H_CASOS_RAIOSX
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'CRX_CAS_ID',
-          :OLD.CRX_CAS_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

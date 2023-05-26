@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_TSA
+CREATE OR REPLACE TRIGGER tg_aud_h_tsa
 AFTER DELETE OR UPDATE
 ON H_TESTES_ANTIGENOS_VIRUS
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'TSA_TEA_ID',
-          :OLD.TSA_TEA_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

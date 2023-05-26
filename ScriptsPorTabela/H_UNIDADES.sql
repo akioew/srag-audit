@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_UNI
+CREATE OR REPLACE TRIGGER tg_aud_h_uni
 AFTER DELETE OR UPDATE
 ON H_UNIDADES
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'UNI_ID',
-          :OLD.UNI_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

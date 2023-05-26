@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_CLA
+CREATE OR REPLACE TRIGGER tg_aud_h_cla
 AFTER DELETE OR UPDATE
 ON H_CLASSIFICACOES
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'CLA_ID',
-          :OLD.CLA_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

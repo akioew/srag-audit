@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_AST
+CREATE OR REPLACE TRIGGER tg_aud_h_ast
 AFTER DELETE OR UPDATE
 ON H_ASPECTOS_TOMOGRAFIA
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'AST_ID',
-          :OLD.AST_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

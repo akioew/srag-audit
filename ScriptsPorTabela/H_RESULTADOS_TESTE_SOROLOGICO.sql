@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_RTS
+CREATE OR REPLACE TRIGGER tg_aud_h_rts
 AFTER DELETE OR UPDATE
 ON H_RESULTADOS_TESTE_SOROLOGICO
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'RTS_ID',
-          :OLD.RTS_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

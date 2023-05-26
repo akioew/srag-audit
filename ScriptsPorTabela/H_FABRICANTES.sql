@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_FAB
+CREATE OR REPLACE TRIGGER tg_aud_h_fab
 AFTER DELETE OR UPDATE
 ON H_FABRICANTES
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'FAB_ID',
-          :OLD.FAB_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

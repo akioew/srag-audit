@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_ANC
+CREATE OR REPLACE TRIGGER tg_aud_h_anc
 AFTER DELETE OR UPDATE
 ON H_ANTIVIRAIS_COVID
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'ANC_ID',
-          :OLD.ANC_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

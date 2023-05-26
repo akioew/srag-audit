@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_GEN
+CREATE OR REPLACE TRIGGER tg_aud_h_gen
 AFTER DELETE OR UPDATE
 ON H_GENERO
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'GEN_ID',
-          :OLD.GEN_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

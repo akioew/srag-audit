@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_MUN
+CREATE OR REPLACE TRIGGER tg_aud_h_mun
 AFTER DELETE OR UPDATE
 ON H_MUNICIPIOS
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'MUN_ID',
-          :OLD.MUN_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

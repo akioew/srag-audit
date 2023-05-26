@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_ENC
+CREATE OR REPLACE TRIGGER tg_aud_h_enc
 AFTER DELETE OR UPDATE
 ON H_ENCERRAMENTOS
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'ENC_CAS_ID',
-          :OLD.ENC_CAS_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

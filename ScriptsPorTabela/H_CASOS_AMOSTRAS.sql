@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_CAM
+CREATE OR REPLACE TRIGGER tg_aud_h_cam
 AFTER DELETE OR UPDATE
 ON H_CASOS_AMOSTRAS
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'CAM_CAS_ID',
-          :OLD.CAM_CAS_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_RAI
+CREATE OR REPLACE TRIGGER tg_aud_h_rai
 AFTER DELETE OR UPDATE
 ON H_RESULTADOS_RAIOX
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'RAI_ID',
-          :OLD.RAI_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

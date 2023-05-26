@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_TSR
+CREATE OR REPLACE TRIGGER tg_aud_h_tsr
 AFTER DELETE OR UPDATE
 ON H_TESTES_RTPCR_VIRUS
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'TSR_TER_ID',
-          :OLD.TSR_TER_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

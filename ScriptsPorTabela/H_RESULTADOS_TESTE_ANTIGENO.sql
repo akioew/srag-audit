@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_RTA
+CREATE OR REPLACE TRIGGER tg_aud_h_rta
 AFTER DELETE OR UPDATE
 ON H_RESULTADOS_TESTE_ANTIGENO
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'RTA_ID',
-          :OLD.RTA_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_TAS
+CREATE OR REPLACE TRIGGER tg_aud_h_tas
 AFTER DELETE OR UPDATE
 ON H_TIPOS_AMOSTRAS_SOROLOGICAS
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'TAS_ID',
-          :OLD.TAS_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_UTI
+CREATE OR REPLACE TRIGGER tg_aud_h_uti
 AFTER DELETE OR UPDATE
 ON H_UTI
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'UTI_CAS_ID',
-          :OLD.UTI_CAS_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

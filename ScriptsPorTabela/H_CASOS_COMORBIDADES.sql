@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_CCO
+CREATE OR REPLACE TRIGGER tg_aud_h_cco
 AFTER DELETE OR UPDATE
 ON H_CASOS_COMORBIDADES
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'CCO_CAS_ID',
-          :OLD.CCO_CAS_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_CEV
+CREATE OR REPLACE TRIGGER tg_aud_h_cev
 AFTER DELETE OR UPDATE
 ON H_CASOS_EVOLUCOES
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'CEV_CAS_ID',
-          :OLD.CEV_CAS_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

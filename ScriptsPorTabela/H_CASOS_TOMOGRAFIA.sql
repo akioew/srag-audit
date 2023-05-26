@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_CTO
+CREATE OR REPLACE TRIGGER tg_aud_h_cto
 AFTER DELETE OR UPDATE
 ON H_CASOS_TOMOGRAFIA
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'CTO_CAS_ID',
-          :OLD.CTO_CAS_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_TAN
+CREATE OR REPLACE TRIGGER tg_aud_h_tan
 AFTER DELETE OR UPDATE
 ON H_TRABALHA_ANIMAIS
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'TAN_ID',
-          :OLD.TAN_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

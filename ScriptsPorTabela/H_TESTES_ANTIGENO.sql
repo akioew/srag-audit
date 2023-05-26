@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_TEA
+CREATE OR REPLACE TRIGGER tg_aud_h_tea
 AFTER DELETE OR UPDATE
 ON H_TESTES_ANTIGENO
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'TEA_CAS_ID',
-          :OLD.TEA_CAS_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

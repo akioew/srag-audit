@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_EST
+CREATE OR REPLACE TRIGGER tg_aud_h_est
 AFTER DELETE OR UPDATE
 ON H_ESTADOS
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'EST_ID',
-          :OLD.EST_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

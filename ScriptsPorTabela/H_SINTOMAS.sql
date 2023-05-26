@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_SIN
+CREATE OR REPLACE TRIGGER tg_aud_h_sin
 AFTER DELETE OR UPDATE
 ON H_SINTOMAS
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'SIN_ID',
-          :OLD.SIN_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_INT
+CREATE OR REPLACE TRIGGER tg_aud_h_int
 AFTER DELETE OR UPDATE
 ON H_INTERNACOES
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'INT_CAS_ID',
-          :OLD.INT_CAS_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_DOS
+CREATE OR REPLACE TRIGGER tg_aud_h_dos
 AFTER DELETE OR UPDATE
 ON H_DOSES
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'DOS_ID',
-          :OLD.DOS_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

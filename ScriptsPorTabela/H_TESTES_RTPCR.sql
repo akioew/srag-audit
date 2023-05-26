@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_TER
+CREATE OR REPLACE TRIGGER tg_aud_h_ter
 AFTER DELETE OR UPDATE
 ON H_TESTES_RTPCR
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'TER_CAS_ID',
-          :OLD.TER_CAS_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

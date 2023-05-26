@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_TSO
+CREATE OR REPLACE TRIGGER tg_aud_h_tso
 AFTER DELETE OR UPDATE
 ON H_TESTE_SOROLOGICOS
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'TSO_CAS_ID',
-          :OLD.TSO_CAS_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

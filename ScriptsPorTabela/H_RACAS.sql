@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_RAC
+CREATE OR REPLACE TRIGGER tg_aud_h_rac
 AFTER DELETE OR UPDATE
 ON H_RACAS
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'RAC_ID',
-          :OLD.RAC_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,

@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE TRIGGER tg_upd_h_ANG
+CREATE OR REPLACE TRIGGER tg_aud_h_ang
 AFTER DELETE OR UPDATE
 ON H_ANTIVIRAIS_GRIPE
 FOR EACH ROW
@@ -16,8 +16,8 @@ BEGIN
           SYSDATE,
           tabela,
           operacao,
-          'ANG_ID',
-          :OLD.ANG_ID,
+          NULL,
+          NULL,
           NULL,
           user_bd,
           user_so,
