@@ -5,9 +5,10 @@
   -  Lista de tabelas e colunas foi extraída do SQL Developer e salva em arquivo separado (TabelasEColunas.js).
 
 ### Pendentes:
-- Incluir código no SRAG oficial e ler colunas e tabelas direto do script node (sem usar arquivo separado "TabelasEColunas.js").
+- Incluir código no SRAG oficial.
 - Quando executar ScriptAuditoria, conectar no user AUDITORIA e depois conectar no user APP para rodar os ScriptsPorTabela.
 - ~~Atualizar nomes das triggers geradas utilizando trigramação (nome completo ultrapassa limite char oracle (30)). PRIORIDADE~~
 - ~~DÚVIDA (caso usuário delete linha inteira):~~
   - ~~Trigger deve salvar somente dados da coluna ID ou criar uma linha na Tab. Auditoria para cada coluna da tabela que teve a linha deletada?~~
 - ~~Verificar casos onde há chave composta e concatenar tudo em uma só string.~~
+- ~~Ler colunas e tabelas direto do script node (sem usar arquivo separado "TabelasEColunas.js")~~

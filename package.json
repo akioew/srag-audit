@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+  "oracledb": "^5.5.0"
+  },
+  "name": "srag-audit",
+  "version": "1.0.0",
+  "description": "- **ScriptAuditoria.sql:** Script com tabela, seq, trigger e procedure para executar no user AUDITORIA. Script também libera acesso da proc para user APP.\r - **ScriptsPorTabela:** Scripts que serão gerados automaticamente para cada tabela e colunas de historiamento.\r   -  Lista de tabelas e colunas foi extraída do SQL Developer e salva em arquivo separado (TabelasEColunas.js).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
